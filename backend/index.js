@@ -210,6 +210,10 @@ app.post("/newOrder", async (req, res) => {
   res.send("Order saved!");
 });
 
+app.get("/ping", (req, res) => {
+  res.status(200).send("pong");
+});
+
 app.listen(PORT, () => {
   console.log("App started!");
   mongoose.connect(uri);
